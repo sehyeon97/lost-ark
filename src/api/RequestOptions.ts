@@ -1,0 +1,15 @@
+
+
+const apiKey = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IktYMk40TkRDSTJ5NTA5NWpjTWk5TllqY2lyZyIsImtpZCI6IktYMk40TkRDSTJ5NTA5NWpjTWk5TllqY2lyZyJ9.eyJpc3MiOiJodHRwczovL2x1ZHkuZ2FtZS5vbnN0b3ZlLmNvbSIsImF1ZCI6Imh0dHBzOi8vbHVkeS5nYW1lLm9uc3RvdmUuY29tL3Jlc291cmNlcyIsImNsaWVudF9pZCI6IjEwMDAwMDAwMDAxNTY3NzkifQ.TjOhaQiSeP64qP7XR525bowea3cGIhNp3BB9LSatlea5ZutIVvGqyosWkNMrs8ck0XCzQAOZ7vZLUUvXZdWXo7yr0dww8VoTHLsA89yqL2m_BNeFruXkGpLSfSJOYKE623XZ2nZeQBG0cU5qHMJkThivagq0dc1nJ4rbDnaY94ChY5aIqVJH9qolpvmzjKvro0V5ibuYwZUh7bmyRzCo65hgjYGP5NFROoF_Gsu36onXXAgPFKfLpOvUr6WucV5_EWhMUHnKhm9uwwfpwfzs4Q-yAywN8W7hF78nuMkQilE3w0UKuOkKO6uD49Ho6LArj6IKuzZa650rCPAaoQlPnQ"
+
+const myHeaders = new Headers();
+myHeaders.append("Accept", "application/json");
+myHeaders.append("Authorization", apiKey);
+
+const requestOptions: RequestInit = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+}
+
+export default requestOptions;
