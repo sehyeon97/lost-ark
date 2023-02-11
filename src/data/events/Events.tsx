@@ -1,22 +1,14 @@
-import myData from "../../api/ConnectTo";
-import Formatter from "./formatter";
+import ConnectTo from "../../api/ConnectTo";
 
 const Events = () => {
-
-    let parsedData = JSON.parse(myData("/news/events"));
-
-    const renderData = (data: any) => {
-        return <Formatter Title={data.Title} Thumbnail={data.Thumbnail} Link={data.Link} StartDate={data.StartDate} EndDate={data.EndDate} RewardDate={data.RewardDate}/>
-    }
-
-    console.log(parsedData[0].Title)
+    
 
     return (
         <div>
-            {renderData(parsedData)}
+            {ConnectTo("/news/events", "event")}
+            {/* {ConnectTo("/guilds/rankings?serverName=%EB%A3%A8%ED%8E%98%EC%98%A8", "guild")} */}
         </div>
     )
-
 }
 
 export default Events;
